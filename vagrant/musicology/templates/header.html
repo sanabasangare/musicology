@@ -1,0 +1,16 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="col-md-6">
+        <a href="{{url_for('showGenres')}}">
+            <h5>Musicology</h5>
+        </a>
+    </div>
+    <div class="col-md-6 text-right nav-pills">
+        {%if 'username' not in session %}
+        <a href="{{url_for('showLogin')}}">
+            <h5>Login</h5> </a>
+        {% else %}
+        <a href="{{url_for('disconnect')}}">
+            <h3>Logout</h3> </a>
+        {% endif %}
+    </div>
+</div>

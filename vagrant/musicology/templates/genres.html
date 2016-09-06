@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Music Genres</h1>
+
+            <a href="{{url_for('newGenre')}}">
+                <h3> Add a New Genre </h3> </a>
+
+            {% for genre in genres %}
+
+
+
+            <a href="{{url_for('showSubgenres', genre_id = genre.id)}}">
+              <p>{{genre.name}}</p>
+            </a>
+
+            <a href="{{url_for('editGenre', genre_id = genre.id)}}">Edit </a> |
+            <a href="{{url_for('deleteGenre', genre_id = genre.id)}}">Delete </a>
+
+
+
+
+            {% endfor %}
+
+        </div>
+
+        <div class="col-md-6">
+          <h1>New Subgenres</h1>
+
+          <a href="{{url_for('newGenre')}}">
+              <h3> Add a New Genre </h3> </a>
+
+          {% for subgenre in subgenres %}
+
+
+
+          <a href="{{url_for('showGenres', genre_id = genre.id)}}">
+              <p>{{genre.name}}</p>
+          </a>
+          
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

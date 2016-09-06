@@ -1,0 +1,53 @@
+body            { font-family: 'Lato', Raleway; padding-top: 70px; background-color: #000000}
+ h1, h2, h3, h4       { color: #0ff; font-family: 'Lato', sans-serif;}
+h1, h2          { font-family: font-family: 'Lato', sans-serif; margin: 0; }
+h1              { border-bottom: 1px solid #fff; }
+h2              { font-size: 1.2em; }
+
+h5            { color: #000; font-family: 'Lato', sans-serif;}
+
+p               { color: #fff; font-size: 1.5em;}
+
+a {text-decoration: none; color:#df5; font-size: .80em;}
+
+.container {
+    display: block;
+}
+
+.col-md-6 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header         {left:50%; text-align: center;}
+.name {width:50%;display: inline-block; float: left;}
+.description {}
+.editdeletepane{}
+
+.flash          { background: #cef; }
+
+.btn {
+	padding: 10px;
+	margin: 0;
+	border-color: #0ff;
+	border-width: 2px;
+	color: #0ff;;
+}
+.btn:hover {
+	border-color: #0df;
+}
+.btn.delete {
+	border-color: #aaa;
+	color: #aaa;
+}
+.btn.delete:hover {
+	border-color: #aaa;
+	color: #f00;
+}
+
+.padding-top {
+	padding-top: 20px;
+}
+.padding-bottom {
+	padding-bottom: 20px;
+}

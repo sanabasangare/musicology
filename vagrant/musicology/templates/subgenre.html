@@ -1,0 +1,60 @@
+<html>
+
+
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>{{ genre.name }}</h1>
+  
+  <div class='flash'>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        
+      <ul>
+      {% for message in messages %}
+          <li> <strong> {{ message }} </strong> </li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+  {% endwith %}
+  </div>
+  
+<div class="padding-top padding-bottom">
+        <a href="{{url_for('editGenre', genre_id = genre.id )}}">
+            <button class="btn btn-default" id="new-subgenre">Edit Genre
+				</button>
+        </a>
+        <a href="{{url_for('newSubgenre', genre_id = genre.id )}}">
+            <button class="btn btn-default" id="new-subgenre">Add Subgenre
+				</button>
+        </a>
+        <a href="{{url_for('deleteGenre', genre_id = genre.id )}}">
+            <button class="btn btn-default delete" id="delete-genre">Delete Genre
+				</button>
+        </a>
+</div>
+
+</div>
+
+</div>
+
+{% if subgenres !=[] %}
+<div class="row">
+    <div class="col-md-10">
+        <h2>Subgenres</h2>
+        <h3>{{ genre.subgenre }}</h3>
+    </div>
+
+</div>
+
+</div>
+{% endif %} {% endblock %}
+
+
+
+
+</html>
