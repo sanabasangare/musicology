@@ -214,7 +214,7 @@ def subgenresJSON(genre_id):
         genre_id=genre_id).all()
     return jsonify(Subgenres=[s.serialize for s in subgenres])
 
-@app.route('/genre/<int:genre_id>/subgenre/<int:subgenre_id>/JSON')
+@app.route('/genre/<int:genre_id>/subgenres/<int:subgenre_id>/JSON')
 def subgenreJSON(genre_id, subgenre_id):
     Subgenre = session.query(Subgenre).filter_by(id=subgenre_id).one()
     return jsonify(Subgenre=Subgenre.serialize)
@@ -397,5 +397,4 @@ def disconnect():
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
-    app.debug = True
     app.run(host='0.0.0.0', port=8000)
