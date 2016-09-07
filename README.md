@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This application provides a list of music sub-genres within a list of genres. It also includes third party user registration (Google OAuth 2.0 API) and authentication. Authenticated users have the ability to create, edit, and delete their own anything they add.
+This application provides a list of music sub-genres within a list of genres. It also includes third party user registration (Google OAuth 2.0 API) and authentication. Authenticated users have the ability to create, edit, and delete anything that they add.
 
 
 ## Installation
