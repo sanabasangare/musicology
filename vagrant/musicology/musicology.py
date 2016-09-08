@@ -118,7 +118,7 @@ def gconnect():
 
     # Get user info
     userinfo_url = "https://www.googleapis.com/oauth2/v1/userinfo"
-    params = {'credentials': credentials, 'alt': 'json'}
+    params = {'credentials' : credentials.access_token, 'alt' : 'json'}
     answer = requests.get(userinfo_url, params=params)
 
     data = answer.json()
@@ -381,7 +381,6 @@ def deleteSubgenre(genre_id, subgenre_id):
 def disconnect():
     if 'provider' in login_session:
         if login_session['provider'] == 'google':
-            gdisconnect()
             del login_session['gplus_id']
             del login_session['credentials']
         del login_session['username']
