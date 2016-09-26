@@ -1,5 +1,8 @@
 # Musicology App
 ---
+Click Me!
+[![S|Sangare](http://c.dryicons.com/images/icon_sets/polygon_icons/png/128x128/music_note.png)](https://sanabasangare.github.io/musicology/)
+---
 
 ## Introduction
 
